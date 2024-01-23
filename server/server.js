@@ -184,7 +184,7 @@ app.post('/create-post', authenticateToken, (req, res) => {
     });
 });
 
-app.get('/posts', (req, res) => {
+app.get('/posts', authenticateToken,  (req, res) => {
     db.all('SELECT * FROM posts', (err, posts) => {
         if (err) {
             console.error('Error getting posts:', err.message);

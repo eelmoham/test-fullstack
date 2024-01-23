@@ -20,9 +20,9 @@ const CreatePost = () => {
         <div className="flex justify-center items-center w-full h-full">
 
             <div className="m-auto flex flex-col justify-center items-center">
-                <div className="form-group">
-                    <label htmlFor="content">write youre post here</label>
-                    <input type="text" value={content} onChange={e => setContent(e.target.value)} className="form-control" id="content" />
+                <div className="form-group flex flex-col gap-2 ">
+                    <label htmlFor="content">write youre post here:</label>
+                    <textarea id="w3review" name="w3review" value={content} onChange={e => setContent(e.target.value)} className="form-control text-black h-20" />
                 </div>
                 <button
                     onClick={addPOst}
